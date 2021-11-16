@@ -6,8 +6,8 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-export const Rightbar = () => {
+export const Post = () => {
 	const classes = useStyles();
 
-	return <Container className={classes.container}>Rightbar</Container>;
+	return <Container className={classes.container}>Post</Container>;
 };

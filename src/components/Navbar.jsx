@@ -19,6 +19,9 @@ import {
 import CancelOutlinedIcon from "@material-ui/icons/CancelOutlined";
 
 const useStyles = makeStyles((theme) => ({
+	appBar: {
+		position: "fixed",
+	},
 	toolbar: {
 		display: "flex",
 		justifyContent: "space-between",
@@ -89,7 +92,7 @@ export const Navbar = () => {
 	const classes = useStyles({ isOpen });
 
 	return (
-		<AppBar>
+		<AppBar position="static" className={classes.appBar}>
 			<Toolbar className={classes.toolbar}>
 				<Typography variant="h6" className={classes.lgoLg}>
 					Web Admin
