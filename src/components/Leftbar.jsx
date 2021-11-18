@@ -1,20 +1,25 @@
 import { Container, makeStyles, Typography } from "@material-ui/core";
-import { Home } from "@material-ui/icons";
-import DashboardOutlinedIcon from "@material-ui/icons/DashboardOutlined";
-import EqualizerOutlinedIcon from "@material-ui/icons/EqualizerOutlined";
-import TimelineOutlinedIcon from "@material-ui/icons/TimelineOutlined";
-import SettingsOutlinedIcon from "@material-ui/icons/SettingsOutlined";
-import FeedbackOutlinedIcon from "@material-ui/icons/FeedbackOutlined";
-import ExitToAppOutlinedIcon from "@material-ui/icons/ExitToAppOutlined";
+import {
+	Bookmark,
+	List,
+	ExitToApp,
+	Home,
+	Person,
+	PhotoCamera,
+	PlayCircleOutline,
+	Settings,
+	Storefront,
+	TabletMac,
+} from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
 	container: {
-		paddingTop: theme.spacing(10),
-		backgroundColor: theme.palette.primary.main,
 		height: "100vh",
 		color: "white",
-		position: "fixed",
-		width: "auto",
+		paddingTop: theme.spacing(10),
+		backgroundColor: theme.palette.primary.main,
+		position: "sticky",
+		top: 0,
 		[theme.breakpoints.up("sm")]: {
 			backgroundColor: "white",
 			color: "#555",
@@ -23,18 +28,11 @@ const useStyles = makeStyles((theme) => ({
 	},
 	item: {
 		display: "flex",
-		// flexDirection: "row",
 		alignItems: "center",
 		marginBottom: theme.spacing(4),
 		[theme.breakpoints.up("sm")]: {
 			marginBottom: theme.spacing(3),
 			cursor: "pointer",
-		},
-	},
-	text: {
-		fontWeight: 500,
-		[theme.breakpoints.down("sm")]: {
-			display: "none",
 		},
 	},
 	icon: {
@@ -43,39 +41,56 @@ const useStyles = makeStyles((theme) => ({
 			fontSize: "18px",
 		},
 	},
+	text: {
+		fontWeight: 500,
+		[theme.breakpoints.down("sm")]: {
+			display: "none",
+		},
+	},
 }));
 
 export const Leftbar = () => {
 	const classes = useStyles();
-
 	return (
 		<Container className={classes.container}>
 			<div className={classes.item}>
 				<Home className={classes.icon} />
-				<Typography className={classes.text}>Home</Typography>
+				<Typography className={classes.text}>Homepage</Typography>
 			</div>
 			<div className={classes.item}>
-				<DashboardOutlinedIcon className={classes.icon} />
-				<Typography className={classes.text}>Dashboard</Typography>
+				<Person className={classes.icon} />
+				<Typography className={classes.text}>Friends</Typography>
 			</div>
 			<div className={classes.item}>
-				<EqualizerOutlinedIcon className={classes.icon} />
-				<Typography className={classes.text}>Statistics</Typography>
+				<List className={classes.icon} />
+				<Typography className={classes.text}>Lists</Typography>
 			</div>
 			<div className={classes.item}>
-				<TimelineOutlinedIcon className={classes.icon} />
-				<Typography className={classes.text}>Activity</Typography>
+				<PhotoCamera className={classes.icon} />
+				<Typography className={classes.text}>Camera</Typography>
 			</div>
 			<div className={classes.item}>
-				<SettingsOutlinedIcon className={classes.icon} />
+				<PlayCircleOutline className={classes.icon} />
+				<Typography className={classes.text}>Videos</Typography>
+			</div>
+			<div className={classes.item}>
+				<TabletMac className={classes.icon} />
+				<Typography className={classes.text}>Apps</Typography>
+			</div>
+			<div className={classes.item}>
+				<Bookmark className={classes.icon} />
+				<Typography className={classes.text}>Collections</Typography>
+			</div>
+			<div className={classes.item}>
+				<Storefront className={classes.icon} />
+				<Typography className={classes.text}>Market Place</Typography>
+			</div>
+			<div className={classes.item}>
+				<Settings className={classes.icon} />
 				<Typography className={classes.text}>Settings</Typography>
 			</div>
 			<div className={classes.item}>
-				<FeedbackOutlinedIcon className={classes.icon} />
-				<Typography className={classes.text}>Feedback</Typography>
-			</div>
-			<div className={classes.item}>
-				<ExitToAppOutlinedIcon className={classes.icon} />
+				<ExitToApp className={classes.icon} />
 				<Typography className={classes.text}>Logout</Typography>
 			</div>
 		</Container>

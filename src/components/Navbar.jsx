@@ -21,6 +21,7 @@ import CancelOutlinedIcon from "@material-ui/icons/CancelOutlined";
 const useStyles = makeStyles((theme) => ({
 	appBar: {
 		position: "fixed",
+		paddingTop: '1px'
 	},
 	toolbar: {
 		display: "flex",

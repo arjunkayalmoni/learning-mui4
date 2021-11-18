@@ -5,7 +5,9 @@ import { Navbar } from "./components/Navbar";
 import { Leftbar } from "./components/Leftbar";
 import { Grid } from "@material-ui/core";
 import { Feed } from "./components/Feed";
+import { Feeds } from "./components/Feeds";
 import { Rightbar } from "./components/Rightbar";
+import { AddPost } from "./components/AddPost";
 
 // const useStyles = makeStyles({
 // 	root: {
@@ -32,18 +34,34 @@ function App() {
 	return (
 		<div>
 			<Navbar />
-			<Grid container spacing={2}>
-				<Grid item xs={2} sm={2} md={2}>
+			<Grid container>
+				<Grid item sm={2} xs={2}>
 					<Leftbar />
 				</Grid>
-				<Grid item xs={10} sm={7} md={8}>
-					<Feed />
+				<Grid item sm={7} xs={10}>
+					<Feeds />
 				</Grid>
-				<Grid item sm={3} md={2} classNam={classes.right}>
+				<Grid item sm={3} className={classes.right}>
 					<Rightbar />
 				</Grid>
+				<AddPost />
 			</Grid>
 		</div>
+		// <div>
+		// 	<Navbar />
+		// 	<Grid container spacing={2}>
+		// 		<Grid item xs={2} sm={3} md={3}>
+		// 			<Leftbar />
+		// 		</Grid>
+		// 		<Grid item xs={10} sm={6} md={6}>
+		// 			{/* <Feed /> */}
+		// 			<Feeds />
+		// 		</Grid>
+		// 		<Grid item sm={3} md={3} className={classes.right}>
+		// 			<Rightbar />
+		// 		</Grid>
+		// 	</Grid>
+		// </div>
 	);
 }
 
